@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USMLEwise Strategy Call | Plan Your USMLE Match Journey</title>
+    <meta name="description"
+        content="Book your $19 strategy call and get your complete A-Z match journey planned by experts who have helped thousands match.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="presentation">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Slide 1: The Shocking Truth -->
+        <section class="slide active" id="slide1">
+            <div class="slide-content">
+                <span class="slide-tag">THE SHOCKING TRUTH</span>
+                <h1>The Real IMG Match Rate<br>for Internal Medicine</h1>
+                <div class="big-stat">
+                    <span class="stat-number" data-value="48">48</span><span class="stat-percent">%</span>
+                </div>
+                <p class="stat-source">Source: NRMP 2024 Match Data</p>
+                <div class="question-box">
+                    <span class="question-icon">💬</span>
+                    <p>"Why do you think it's so low?"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: The Real Number -->
+        <section class="slide" id="slide2">
+            <div class="slide-content">
+                <span class="slide-tag">THE TRUTH REVEALED</span>
+                <h1>48% Is a Lie.<br><span class="highlight-red">The Real Number Is 35%.</span></h1>
+                <div class="two-column">
+                    <div class="column">
+                        <div class="pie-chart inflated">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="bg" cx="50" cy="50" r="40" />
+                                <circle class="fill" cx="50" cy="50" r="40" stroke-dasharray="120.6 251.2" />
+                            </svg>
+                            <div class="pie-label">48%</div>
+                        </div>
+                        <h3>"Official" Rate</h3>
+                        <p class="small">Matches ÷ Rank Order List Submitters</p>
+                        <p class="footnote">⚠️ Only counts those who got interviews</p>
+                    </div>
+                    <div class="column">
+                        <div class="pie-chart real">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="bg" cx="50" cy="50" r="40" />
+                                <circle class="fill" cx="50" cy="50" r="40" stroke-dasharray="87.9 251.2" />
+                            </svg>
+                            <div class="pie-label">35%</div>
+                        </div>
+                        <h3>REAL Rate</h3>
+                        <p class="small">Matches ÷ ALL Applicants</p>
+                        <p class="footnote">✓ Includes those who never got interviews</p>
+                    </div>
+                </div>
+                <div class="callout-box danger">
+                    <strong>Thousands of IMGs never even get interviews.</strong><br>
+                    They're hidden from the "official" statistics.
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Flight Analogy - Current Reality -->
+        <section class="slide" id="slide3">
+            <div class="slide-content">
+                <span class="slide-tag">THE CURRENT REALITY</span>
+                <h1>You're Taking <span class="highlight-red">100 Flights</span><br>to Get to America</h1>
+                <div class="flight-diagram complex">
+                    <svg viewBox="0 0 800 300" class="flight-svg">
+                        <!-- Start point -->
+                        <circle cx="50" cy="150" r="12" fill="#15c6ff" />
+                        <text x="50" y="185" class="location-label">YOU</text>
+
+                        <!-- Multiple stops -->
+                        <circle cx="150" cy="80" r="8" fill="#ffc857" />
+                        <text x="150" y="60" class="stop-label">Step Prep Co.</text>
+
+                        <circle cx="250" cy="200" r="8" fill="#ffc857" />
+                        <text x="250" y="230" class="stop-label">Research Co.</text>
+
+                        <circle cx="350" cy="100" r="8" fill="#ffc857" />
+                        <text x="350" y="80" class="stop-label">Rotation Co.</text>
+
+                        <circle cx="450" cy="220" r="8" fill="#ffc857" />
+                        <text x="450" y="250" class="stop-label">CV Service</text>
+
+                        <circle cx="550" cy="90" r="8" fill="#ffc857" />
+                        <text x="550" y="70" class="stop-label">Interview Prep</text>
+
+                        <circle cx="650" cy="180" r="8" fill="#ffc857" />
+                        <text x="650" y="210" class="stop-label">Application Co.</text>
+
+                        <!-- End point -->
+                        <circle cx="750" cy="150" r="12" fill="#e22023" />
+                        <text x="750" y="185" class="location-label">MATCH</text>
+
+                        <!-- Messy flight paths -->
+                        <path d="M62 150 Q100 100 150 80" class="flight-path dashed" />
+                        <path d="M158 80 Q200 150 250 200" class="flight-path dashed" />
+                        <path d="M258 200 Q300 150 350 100" class="flight-path dashed" />
+                        <path d="M358 100 Q400 170 450 220" class="flight-path dashed" />
+                        <path d="M458 220 Q500 150 550 90" class="flight-path dashed" />
+                        <path d="M558 90 Q600 140 650 180" class="flight-path dashed" />
+                        <path d="M658 180 Q700 160 738 150" class="flight-path dashed" />
+                    </svg>
+                </div>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <span class="icon">✈️</span>
+                        <p>Each flight = Different company</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="icon">📅</span>
+                        <p>Different timelines</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="icon">🎯</span>
+                        <p>Different agendas</p>
+                    </div>
+                </div>
+                <div class="question-box">
+                    <span class="question-icon">🤔</span>
+                    <p>"What do you think the error rate is?"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Better Option Still Fails -->
+        <section class="slide" id="slide4">
+            <div class="slide-content">
+                <span class="slide-tag">THE "BETTER" OPTION</span>
+                <h1>Fewer Flights.<br><span class="highlight-gold">Still Not Direct.</span></h1>
+                <div class="flight-diagram medium">
+                    <svg viewBox="0 0 800 200" class="flight-svg">
+                        <!-- Start point -->
+                        <circle cx="80" cy="100" r="15" fill="#15c6ff" />
+                        <text x="80" y="140" class="location-label">YOU</text>
+
+                        <!-- Fewer stops but still multiple -->
+                        <circle cx="250" cy="60" r="10" fill="#ffc857" />
+                        <text x="250" y="45" class="stop-label">Company A</text>
+
+                        <circle cx="420" cy="140" r="10" fill="#ffc857" />
+                        <text x="420" y="170" class="stop-label">Company B</text>
+
+                        <circle cx="590" cy="80" r="10" fill="#ffc857" />
+                        <text x="590" y="60" class="stop-label">Company C</text>
+
+                        <!-- End point -->
+                        <circle cx="720" cy="100" r="15" fill="#e22023" />
+                        <text x="720" y="140" class="location-label">MATCH</text>
+
+                        <!-- Flight paths -->
+                        <path d="M95 100 Q170 60 250 60" class="flight-path dashed" />
+                        <path d="M260 60 Q340 110 420 140" class="flight-path dashed" />
+                        <path d="M430 140 Q510 110 590 80" class="flight-path dashed" />
+                        <path d="M600 80 Q660 90 705 100" class="flight-path dashed" />
+                    </svg>
+                </div>
+                <div class="comparison-list">
+                    <div class="list-item negative">
+                        <span class="icon">❌</span>
+                        <p>Still multiple handoffs between companies</p>
+                    </div>
+                    <div class="list-item negative">
+                        <span class="icon">❌</span>
+                        <p>Gaps in your journey no one owns</p>
+                    </div>
+                    <div class="list-item negative">
+                        <span class="icon">❌</span>
+                        <p>High error rate at every connection</p>
+                    </div>
+                </div>
+                <div class="callout-box warning">
+                    <strong>You're still not flying direct.</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: The USMLEwise Solution -->
+        <section class="slide" id="slide5">
+            <div class="slide-content">
+                <span class="slide-tag">THE SOLUTION</span>
+                <h1>One Direct Flight.<br><span class="highlight-cyan">Step 1 → Match.</span></h1>
+                <div class="flight-diagram direct">
+                    <svg viewBox="0 0 800 200" class="flight-svg">
+                        <!-- Start point -->
+                        <circle cx="100" cy="100" r="20" fill="#15c6ff" />
+                        <text x="100" y="145" class="location-label">YOU</text>
+
+                        <!-- Direct line -->
+                        <line x1="120" y1="100" x2="680" y2="100" class="flight-path-direct" />
+
+                        <!-- Plane icon -->
+                        <g class="plane-icon" transform="translate(400, 100)">
+                            <polygon points="-15,0 15,-8 15,8" fill="#15c6ff" />
+                        </g>
+
+                        <!-- End point -->
+                        <circle cx="700" cy="100" r="20" fill="#00c853" />
+                        <text x="700" y="145" class="location-label">MATCH</text>
+                    </svg>
+                </div>
+                <div class="brand-intro">
+                    <img src="https://via.placeholder.com/200x60/001b5c/ffffff?text=USMLEwise" alt="USMLEwise"
+                        class="brand-logo">
+                    <h2>Your Direct Flight to the Match</h2>
+                </div>
+                <div class="reason-cards">
+                    <div class="reason-card">
+                        <span class="icon">😰</span>
+                        <h4>The Match is stressful</h4>
+                    </div>
+                    <div class="reason-card">
+                        <span class="icon">📚</span>
+                        <h4>Too much to do alone</h4>
+                    </div>
+                    <div class="reason-card">
+                        <span class="icon">📊</span>
+                        <h4>65% failure rate proves it's broken</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Dual Focus Approach -->
+        <section class="slide" id="slide6">
+            <div class="slide-content">
+                <span class="slide-tag">WHY IT WORKS</span>
+                <h1>While You Prepare,<br><span class="highlight-gold">We Build Your Profile</span></h1>
+                <div class="dual-focus-grid">
+                    <div class="focus-item">
+                        <div class="focus-left">
+                            <span class="step-badge">Step 1 Prep</span>
+                        </div>
+                        <div class="focus-plus">+</div>
+                        <div class="focus-right">
+                            <span class="profile-badge">7-8 Research Publications</span>
+                        </div>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-left">
+                            <span class="step-badge">Step 2 Prep</span>
+                        </div>
+                        <div class="focus-plus">+</div>
+                        <div class="focus-right">
+                            <span class="profile-badge">Clinical Rotations Scheduling</span>
+                        </div>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-left">
+                            <span class="step-badge">Clinical Rotations</span>
+                        </div>
+                        <div class="focus-plus">+</div>
+                        <div class="focus-right">
+                            <span class="profile-badge">Interpersonal Skills Development</span>
+                        </div>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-left">
+                            <span class="step-badge">Every Step</span>
+                        </div>
+                        <div class="focus-plus">+</div>
+                        <div class="focus-right">
+                            <span class="profile-badge">CV, Conferences, Certifications</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="callout-box success">
+                    <strong>"We're not just preparing you for the next exam.<br>We're preparing you for the
+                        Match."</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Autopilot Match AI -->
+        <section class="slide" id="slide7">
+            <div class="slide-content">
+                <span class="slide-tag">THE SECRET WEAPON</span>
+                <h1>Autopilot Match AI<br><span class="highlight-cyan">Built from 35,000 Applicants</span></h1>
+                <div class="ai-visual">
+                    <div class="data-point-cloud">
+                        <div class="data-number">35,000</div>
+                        <div class="data-label">Real Match Applicants</div>
+                    </div>
+                </div>
+                <div class="ai-features">
+                    <div class="ai-feature">
+                        <div class="feature-icon">📋</div>
+                        <h3>WHAT</h3>
+                        <p>Exactly what to do at each stage</p>
+                    </div>
+                    <div class="ai-feature">
+                        <div class="feature-icon">🎯</div>
+                        <h3>HOW</h3>
+                        <p>The precise method for each task</p>
+                    </div>
+                    <div class="ai-feature">
+                        <div class="feature-icon">⏰</div>
+                        <h3>WHEN</h3>
+                        <p>The optimal timing for everything</p>
+                    </div>
+                </div>
+                <div class="callout-box">
+                    <strong>No guessing. No hoping. Data-driven precision.</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: The Proof -->
+        <section class="slide" id="slide8">
+            <div class="slide-content">
+                <span class="slide-tag">THE PROOF</span>
+                <h1>The Numbers Don't Lie</h1>
+                <div class="comparison-stats">
+                    <div class="stat-box low">
+                        <div class="stat-value">35%</div>
+                        <div class="stat-title">Industry Average</div>
+                        <div class="stat-bar">
+                            <div class="bar-fill" style="width: 35%"></div>
+                        </div>
+                    </div>
+                    <div class="vs-divider">VS</div>
+                    <div class="stat-box high">
+                        <div class="stat-value">98.2%</div>
+                        <div class="stat-title">USMLEwise</div>
+                        <div class="stat-bar">
+                            <div class="bar-fill" style="width: 98.2%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proof-highlight">
+                    <p class="big-claim">98.2% of our students match on their <span class="highlight-gold">FIRST
+                            attempt</span></p>
+                    <p class="sub-claim">Our goal: Make the Match your first and last attempt</p>
+                </div>
+                <div class="badge gold">
+                    ⭐ Industry Gold Standard
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Audience Question -->
+        <section class="slide" id="slide9">
+            <div class="slide-content">
+                <span class="slide-tag">HONEST REFLECTION</span>
+                <h1>Be Honest With Yourself</h1>
+                <div class="reflection-questions">
+                    <div class="reflection-item">
+                        <span class="checkbox">☐</span>
+                        <p>Do you know <strong>exactly what it takes</strong> to match?</p>
+                    </div>
+                    <div class="reflection-item">
+                        <span class="checkbox">☐</span>
+                        <p>Do you have <strong>specific steps</strong> mapped out?</p>
+                    </div>
+                    <div class="reflection-item">
+                        <span class="checkbox">☐</span>
+                        <p>Do you know <strong>your timeline</strong> for each milestone?</p>
+                    </div>
+                </div>
+                <div class="callout-box warning large">
+                    <span class="warning-icon">⚠️</span>
+                    <p><strong>"If you don't have a clear plan,<br>you're flying blind."</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Financial Return -->
+        <section class="slide" id="slide10">
+            <div class="slide-content">
+                <span class="slide-tag">THE VALUE</span>
+                <h1>On Average, We Save You<br><span class="highlight-gold">1 Year</span></h1>
+                <div class="value-breakdown">
+                    <div class="value-item positive">
+                        <span class="value-amount">$19,000</span>
+                        <span class="value-label">Avoid reapplication costs</span>
+                    </div>
+                    <div class="value-plus">+</div>
+                    <div class="value-item positive">
+                        <span class="value-amount">$72,000</span>
+                        <span class="value-label">Earn residency salary sooner</span>
+                    </div>
+                    <div class="value-equals">=</div>
+                    <div class="value-item total positive">
+                        <span class="value-amount">$91,000</span>
+                        <span class="value-label">in VALUE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: How to Work With Us -->
+        <section class="slide" id="slide11">
+            <div class="slide-content">
+                <span class="slide-tag">YOUR NEXT STEP</span>
+                <h1>Book Your<br><span class="highlight-cyan">Expert Strategy Call</span></h1>
+                <div class="call-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🗺️</span>
+                        <div class="benefit-text">
+                            <h4>Plan Your Entire Journey A to Z</h4>
+                            <p>From where you are now to Match Day</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📊</span>
+                        <div class="benefit-text">
+                            <h4>Get Your Exact Timeline</h4>
+                            <p>Informed by 35,000 data points</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✅</span>
+                        <div class="benefit-text">
+                            <h4>Know What, When, and How</h4>
+                            <p>For every single step</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-note">
+                    <span class="icon">👨‍⚕️</span>
+                    <p>With experts who have helped <strong>thousands</strong> of applicants match</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Bonuses -->
+        <section class="slide" id="slide12">
+            <div class="slide-content">
+                <span class="slide-tag">FREE BONUSES</span>
+                <h1>What You Get With Your<br><span class="highlight-gold">Strategy Call</span></h1>
+                <div class="bonus-stack">
+                    <div class="bonus-item">
+                        <div class="bonus-badge">BONUS 1</div>
+                        <div class="bonus-details">
+                            <h3>Conference List</h3>
+                            <p>Updated monthly • All specialties included</p>
+                        </div>
+                        <div class="bonus-value">$69 value</div>
+                    </div>
+                    <div class="bonus-item featured">
+                        <div class="bonus-badge">BONUS 2</div>
+                        <div class="bonus-details">
+                            <h3>Research Course</h3>
+                            <p>Complete access • Self-paced learning</p>
+                        </div>
+                        <div class="bonus-value">$299 value</div>
+                    </div>
+                </div>
+                <div class="total-value">
+                    <span class="total-label">Total Bonus Value:</span>
+                    <span class="total-amount">$368</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 13: The Offer - Original Price -->
+        <section class="slide" id="slide13">
+            <div class="slide-content">
+                <span class="slide-tag">THE INVESTMENT</span>
+                <h1>Here's What You Pay</h1>
+                <div class="single-price-display">
+                    <div class="price-card original">
+                        <span class="price-amount">$349</span>
+                        <span class="price-label">Original Price</span>
+                    </div>
+                </div>
+                <p class="price-context">This is the standard price for our Expert Strategy Call</p>
+            </div>
+        </section>
+
+        <!-- Slide 14: Price Drop to $199 -->
+        <section class="slide" id="slide14">
+            <div class="slide-content">
+                <span class="slide-tag">BUT WAIT...</span>
+                <h1>We've Reduced The Price</h1>
+                <div class="single-price-display">
+                    <div class="price-card reduced">
+                        <span class="price-was">Was $349</span>
+                        <span class="price-amount">$199</span>
+                        <span class="price-label">Due to Our Success</span>
+                    </div>
+                </div>
+                <p class="price-context">Because we've helped so many students match, we've been able to lower the price
+                </p>
+            </div>
+        </section>
+
+        <!-- Slide 15: Price Drop to $99 -->
+        <section class="slide" id="slide15">
+            <div class="slide-content">
+                <span class="slide-tag">IT GETS BETTER...</span>
+                <h1>We've Reduced It Even Further</h1>
+                <div class="single-price-display">
+                    <div class="price-card reduced">
+                        <span class="price-was">Was $199</span>
+                        <span class="price-amount">$99</span>
+                        <span class="price-label">Current Price</span>
+                    </div>
+                </div>
+                <p class="price-context">Over time, we've been able to reduce the price even more</p>
+            </div>
+        </section>
+
+        <!-- Slide 16: Final Price - $19 Webinar Special -->
+        <section class="slide" id="slide16">
+            <div class="slide-content">
+                <span class="slide-tag special">🔥 WEBINAR SPECIAL</span>
+                <h1>Today Only</h1>
+                <div class="single-price-display">
+                    <div class="price-card final">
+                        <span class="price-was">Was $99</span>
+                        <span class="price-amount highlight">$19</span>
+                        <span class="price-label">Webinar Special</span>
+                    </div>
+                </div>
+                <div class="convinced-box">
+                    <p>💬 "I convinced my team to drop it to <strong>$19</strong> for this webinar only."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 17: Urgency & Scarcity -->
+        <section class="slide" id="slide17">
+            <div class="slide-content">
+                <span class="slide-tag urgent">⚡ LIMITED TIME</span>
+                <h1>This Offer Ends When<br><span class="highlight-red">This Webinar Ends</span></h1>
+                <div class="urgency-elements">
+                    <div class="urgency-item">
+                        <span class="urgency-icon">⏰</span>
+                        <p>One-time deal</p>
+                    </div>
+                    <div class="urgency-item">
+                        <span class="urgency-icon">🎯</span>
+                        <p>Only <strong>20 slots</strong> available</p>
+                    </div>
+                    <div class="urgency-item">
+                        <span class="urgency-icon">❌</span>
+                        <p>Price goes back up after this call</p>
+                    </div>
+                </div>
+                <div class="callout-box danger large">
+                    <p><strong>"Don't be part of the 65%.<br>Take control of your journey today."</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 18: CTA -->
+        <section class="slide" id="slide18">
+            <div class="slide-content cta-slide">
+                <h1>Book Your<br><span class="highlight-price">$19</span> Strategy Call Now</h1>
+                <div class="cta-button-container">
+                    <a href="#" class="cta-button pulse">
+                        <span class="cta-text">BOOK MY STRATEGY CALL</span>
+                        <span class="cta-arrow">→</span>
+                    </a>
+                </div>
+                <div class="reminder-list">
+                    <div class="reminder-item">
+                        <span class="check">✓</span>
+                        <p>Full A-Z journey plan</p>
+                    </div>
+                    <div class="reminder-item">
+                        <span class="check">✓</span>
+                        <p>Exact timeline from 35,000 data points</p>
+                    </div>
+                    <div class="reminder-item">
+                        <span class="check">✓</span>
+                        <p>$368 in bonuses</p>
+                    </div>
+                </div>
+                <div class="final-urgency">
+                    <p>🔥 <strong>20 slots.</strong> When they're gone, they're gone.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="slide-nav">
+            <button class="nav-btn prev" id="prevBtn">←</button>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">18</span>
+            </div>
+            <button class="nav-btn next" id="nextBtn">→</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

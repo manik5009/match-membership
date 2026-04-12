@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USMLEWise 1st Attempt Match System 2027</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="presentation">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Slide 1: The Corrected Match Rate -->
+        <section class="slide active" id="slide1">
+            <div class="slide-content large-table-container">
+                <span class="slide-tag">THE REAL NUMBERS</span>
+                <h1 class="small-margin">The Corrected Match Rate<br><span class="highlight-cyan">for IMGs (2026)</span></h1>
+                
+                <div class="formula-box">
+                    <div class="formula-concept">
+                        <span class="bad">Published Match Rate</span>
+                        <div class="formula-math">
+                            <span class="numerator">Number Matched</span>
+                            <span class="denominator">Number Who Submitted a Rank List</span>
+                        </div>
+                    </div>
+                    <div class="formula-concept">
+                        <span class="good">Corrected Match Rate</span>
+                        <div class="formula-math">
+                            <span class="numerator">Number Matched</span>
+                            <span class="denominator">Number Who Applied (All registered applicants)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="stat-source text-center">The published rate hides everyone who applied but never got to rank. The corrected rate counts them. This is the real number.</p>
+
+                <div class="data-grid-container">
+                    <div class="summary-rates">
+                        <div class="summary-box">
+                            <h4>US IMG</h4>
+                            <p><span class="published-rate">70.0%</span> → <span class="corrected-rate">53.4%</span></p>
+                        </div>
+                        <div class="summary-box">
+                            <h4>Non-US IMG</h4>
+                            <p><span class="published-rate">56.4%</span> → <span class="corrected-rate">46.0%</span></p>
+                        </div>
+                    </div>
+
+                    <table class="match-rate-table">
+                        <thead>
+                            <tr>
+                                <th>Specialty</th>
+                                <th>US IMG (Pub → Corr)</th>
+                                <th>Non-US IMG (Pub → Corr)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Internal Medicine (Cat)</td><td>56.8% → <span class="highlight-red-text">43.3%</span></td><td>44.4% → <span class="highlight-red-text">36.2%</span></td></tr>
+                            <tr><td>Family Medicine</td><td>48.5% → <span class="highlight-red-text">37.0%</span></td><td>34.3% → <span class="highlight-red-text">28.0%</span></td></tr>
+                            <tr><td>Pediatrics (Cat)</td><td>64.7% → <span class="highlight-red-text">49.3%</span></td><td>46.2% → <span class="highlight-red-text">37.6%</span></td></tr>
+                            <tr><td>Emergency Medicine</td><td>75.2% → <span class="highlight-red-text">57.4%</span></td><td>44.9% → <span class="highlight-red-text">36.6%</span></td></tr>
+                            <tr><td>Psychiatry</td><td>54.8% → <span class="highlight-red-text">41.7%</span></td><td>51.9% → <span class="highlight-red-text">42.3%</span></td></tr>
+                            <tr><td>Neurology</td><td>36.0% → <span class="highlight-red-text">27.5%</span></td><td>26.3% → <span class="highlight-red-text">21.4%</span></td></tr>
+                            <tr><td>Pathology</td><td>46.7% → <span class="highlight-red-text">35.7%</span></td><td>42.4% → <span class="highlight-red-text">34.6%</span></td></tr>
+                            <tr><td>Surgery-Prelim (PGY-1)</td><td>28.0% → <span class="highlight-red-text">21.4%</span></td><td>37.7% → <span class="highlight-red-text">30.7%</span></td></tr>
+                            <tr><td>Surgery (Categorical)</td><td>25.0% → <span class="highlight-red-text">19.1%</span></td><td>23.1% → <span class="highlight-red-text">18.9%</span></td></tr>
+                            <tr><td>Transitional Year (PGY-1)</td><td>29.7% → <span class="highlight-red-text">22.6%</span></td><td>16.6% → <span class="highlight-red-text">13.5%</span></td></tr>
+                            <tr><td>Anesthesiology</td><td>32.7% → <span class="highlight-red-text">25.0%</span></td><td>33.7% → <span class="highlight-red-text">27.5%</span></td></tr>
+                            <tr><td>Medicine-Prelim (PGY-1)</td><td>19.3% → <span class="highlight-red-text">14.7%</span></td><td>13.6% → <span class="highlight-red-text">11.1%</span></td></tr>
+                            <tr><td>Medicine-Primary</td><td>12.6% → <span class="highlight-red-text">9.6%</span></td><td>11.1% → <span class="highlight-red-text">9.0%</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Flight Analogy - Current Reality (100 Flights) -->
+        <section class="slide" id="slide2">
+            <div class="slide-content">
+                <span class="slide-tag">THE CURRENT REALITY</span>
+                <h1>You're Taking <span class="highlight-red">100 Flights</span><br>to Get to America</h1>
+                <div class="flight-diagram complex">
+                    <svg viewBox="0 0 800 300" class="flight-svg">
+                        <circle cx="50" cy="150" r="12" fill="#15c6ff" />
+                        <text x="50" y="185" class="location-label">YOU</text>
+                        <circle cx="150" cy="80" r="8" fill="#ffc857" />
+                        <text x="150" y="60" class="stop-label">Step Prep Co.</text>
+                        <circle cx="250" cy="200" r="8" fill="#ffc857" />
+                        <text x="250" y="230" class="stop-label">Research Co.</text>
+                        <circle cx="350" cy="100" r="8" fill="#ffc857" />
+                        <text x="350" y="80" class="stop-label">Rotation Co.</text>
+                        <circle cx="450" cy="220" r="8" fill="#ffc857" />
+                        <text x="450" y="250" class="stop-label">CV Service</text>
+                        <circle cx="550" cy="90" r="8" fill="#ffc857" />
+                        <text x="550" y="70" class="stop-label">Interview Prep</text>
+                        <circle cx="650" cy="180" r="8" fill="#ffc857" />
+                        <text x="650" y="210" class="stop-label">Application Co.</text>
+                        <circle cx="750" cy="150" r="12" fill="#e22023" />
+                        <text x="750" y="185" class="location-label">MATCH</text>
+                        <path d="M62 150 Q100 100 150 80" class="flight-path dashed" />
+                        <path d="M158 80 Q200 150 250 200" class="flight-path dashed" />
+                        <path d="M258 200 Q300 150 350 100" class="flight-path dashed" />
+                        <path d="M358 100 Q400 170 450 220" class="flight-path dashed" />
+                        <path d="M458 220 Q500 150 550 90" class="flight-path dashed" />
+                        <path d="M558 90 Q600 140 650 180" class="flight-path dashed" />
+                        <path d="M658 180 Q700 160 738 150" class="flight-path dashed" />
+                    </svg>
+                </div>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <span class="icon">✈️</span>
+                        <p>Each flight = Different company</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="icon">📅</span>
+                        <p>Different timelines</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="icon">🎯</span>
+                        <p>Different agendas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Better Option Still Fails -->
+        <section class="slide" id="slide3">
+            <div class="slide-content">
+                <span class="slide-tag">THE "BETTER" OPTION</span>
+                <h1>Fewer Flights.<br><span class="highlight-gold">Still Not Direct.</span></h1>
+                <div class="flight-diagram medium">
+                    <svg viewBox="0 0 800 200" class="flight-svg">
+                        <circle cx="80" cy="100" r="15" fill="#15c6ff" />
+                        <text x="80" y="140" class="location-label">YOU</text>
+                        <circle cx="250" cy="60" r="10" fill="#ffc857" />
+                        <text x="250" y="45" class="stop-label">Company A</text>
+                        <circle cx="420" cy="140" r="10" fill="#ffc857" />
+                        <text x="420" y="170" class="stop-label">Company B</text>
+                        <circle cx="590" cy="80" r="10" fill="#ffc857" />
+                        <text x="590" y="60" class="stop-label">Company C</text>
+                        <circle cx="720" cy="100" r="15" fill="#e22023" />
+                        <text x="720" y="140" class="location-label">MATCH</text>
+                        <path d="M95 100 Q170 60 250 60" class="flight-path dashed" />
+                        <path d="M260 60 Q340 110 420 140" class="flight-path dashed" />
+                        <path d="M430 140 Q510 110 590 80" class="flight-path dashed" />
+                        <path d="M600 80 Q660 90 705 100" class="flight-path dashed" />
+                    </svg>
+                </div>
+                <div class="comparison-list">
+                    <div class="list-item negative">
+                        <span class="icon">❌</span>
+                        <p>Still multiple handoffs between companies</p>
+                    </div>
+                    <div class="list-item negative">
+                        <span class="icon">❌</span>
+                        <p>Gaps in your journey no one owns</p>
+                    </div>
+                    <div class="list-item negative">
+                        <span class="icon">❌</span>
+                        <p>High error rate at every connection</p>
+                    </div>
+                </div>
+                <div class="callout-box warning">
+                    <strong>You're still not flying direct.</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: The USMLEwise Solution - Direct Flight -->
+        <section class="slide" id="slide4">
+            <div class="slide-content">
+                <span class="slide-tag">THE SOLUTION</span>
+                <h1>One Direct Flight.<br><span class="highlight-cyan">Step 1 → Match.</span></h1>
+                <div class="flight-diagram direct">
+                    <svg viewBox="0 0 800 200" class="flight-svg">
+                        <circle cx="100" cy="100" r="20" fill="#15c6ff" />
+                        <text x="100" y="145" class="location-label">YOU</text>
+                        <line x1="120" y1="100" x2="680" y2="100" class="flight-path-direct" />
+                        <g class="plane-icon" transform="translate(400, 100)">
+                            <polygon points="-15,0 15,-8 15,8" fill="#15c6ff" />
+                        </g>
+                        <circle cx="700" cy="100" r="20" fill="#00c853" />
+                        <text x="700" y="145" class="location-label">MATCH</text>
+                    </svg>
+                </div>
+                <h2 style="margin-top: 20px;">USMLEWise: Your Direct Flight to the Match</h2>
+                <div class="info-cards" style="margin-top: 20px;">
+                    <div class="info-card">
+                        <span class="icon">😰</span>
+                        <p>The Match is stressful</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="icon">📚</span>
+                        <p>Too much to do alone</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="icon">📊</span>
+                        <p>65% failure rate proves it's broken</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: The Numbers Behind the System (early proof) -->
+        <section class="slide" id="slide5">
+            <div class="slide-content">
+                <span class="slide-tag">THE PROOF</span>
+                <h1 class="small-margin">The Numbers Behind the System</h1>
+
+                <div class="stats-grid">
+                    <div class="stat-row top-tier">
+                        <span class="percentage">100%</span>
+                        <span class="stat-desc">USMLEWise US MDs, DOs, and US IMGs</span>
+                    </div>
+                    <div class="stat-row high-tier">
+                        <span class="percentage">100%</span>
+                        <span class="stat-desc">USMLEWise Non-US IMGs (without red flags)</span>
+                    </div>
+                    <div class="stat-row mid-tier">
+                        <span class="percentage">88%</span>
+                        <span class="stat-desc">USMLEWise Non-US IMGs (all data, including red flags)</span>
+                    </div>
+                    
+                    <div class="vs-divider-small">V S &nbsp; N A T I O N A L &nbsp; A V E R A G E S</div>
+
+                    <div class="stat-row low-tier">
+                        <span class="percentage">53.4%</span>
+                        <span class="stat-desc">Corrected national rate for US IMGs (NRMP 2026)</span>
+                    </div>
+                    <div class="stat-row low-tier">
+                        <span class="percentage">46.0%</span>
+                        <span class="stat-desc">Corrected national rate for non-US IMGs (NRMP 2026)</span>
+                    </div>
+                </div>
+
+                <div class="callout-box success large" style="margin-top: 30px;">
+                    <p>The corrected national non-US IMG rate is 46%. Ours is 100%.</p>
+                    <strong>"That's not luck. That's a system."</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Student Proof 1 -->
+        <section class="slide" id="slide6">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>Our Students <span class="highlight-gold">Match.</span></h1>
+                <div class="proof-screenshot">
+                    <img src="proof-1.png" alt="USMLEWise student match testimonials">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Student Proof 2 -->
+        <section class="slide" id="slide7">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>More Success Stories</h1>
+                <div class="proof-screenshot">
+                    <img src="proof-2.png" alt="USMLEWise student match testimonials">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Student Proof 3 -->
+        <section class="slide" id="slide8">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>Match After Match</h1>
+                <div class="proof-screenshot">
+                    <img src="proof-3.png" alt="USMLEWise student match testimonials">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Student Proof 4 -->
+        <section class="slide" id="slide9">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>The Proof Speaks for Itself</h1>
+                <div class="proof-screenshot">
+                    <img src="proof-4.png" alt="USMLEWise student match testimonials">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Student Proof 5 -->
+        <section class="slide" id="slide10">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>This Is What a System Looks Like</h1>
+                <div class="proof-screenshot">
+                    <img src="proof-5.png" alt="USMLEWise student match testimonials">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Student Proof 6 -->
+        <section class="slide" id="slide11">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>Mount Sinai. <span class="highlight-gold">Matched.</span></h1>
+                <div class="proof-screenshot">
+                    <img src="proof-6.png" alt="USMLEWise student match testimonial - Mount Sinai">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Student Proof 7 -->
+        <section class="slide" id="slide12">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>Every Specialty. Every Story.</h1>
+                <div class="proof-screenshot">
+                    <img src="proof-7.png" alt="USMLEWise student match testimonials">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 13: Student Proof 8 -->
+        <section class="slide" id="slide13">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>Matched. Grateful. Prepared.</h1>
+                <div class="proof-screenshot">
+                    <img src="proof-8.png" alt="USMLEWise student match testimonials">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 14: Student Proof 9 -->
+        <section class="slide" id="slide14">
+            <div class="slide-content">
+                <span class="slide-tag special">REAL RESULTS</span>
+                <h1>It Keeps Happening</h1>
+                <div class="proof-screenshot">
+                    <img src="proof-9.png" alt="USMLEWise student match testimonials">
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 15: Signature System -->
+        <section class="slide" id="slide15">
+            <div class="slide-content">
+                <span class="slide-tag">OUR SIGNATURE SYSTEM</span>
+                <h1>USMLEWise 1st Attempt<br><span class="highlight-gold">Match System (2027)</span></h1>
+                
+                <p class="large-subtitle">The most comprehensive match preparation system ever assembled in one place.</p>
+                
+                <div class="system-features-grid">
+                    <div class="feature-card">
+                        <span class="icon">💻</span>
+                        <h4>5 Premium Courses</h4>
+                        <p>Self-paced. Watch on your schedule.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">🧩</span>
+                        <h4>PD Frameworks</h4>
+                        <p>Built on the frameworks program directors actually use.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">🔗</span>
+                        <h4>One Coherent Story</h4>
+                        <p>Your PS, CV, interviews, and strategy all integrated.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">👥</span>
+                        <h4>Staff & Alumni Action</h4>
+                        <p>Priority access to people who have helped thousands match.</p>
+                    </div>
+                </div>
+
+                <div class="audience-ribbon">
+                    For IMGs, US IMGs, MDs, and DOs.
+                </div>
+
+                <div class="proof-ribbon">
+                    <span class="proof-item">Used by 10,000+ students worldwide</span>
+                    <span class="proof-item">100% match for IMGs (no red flags)</span>
+                    <span class="proof-item">100% match for US MDs/DOs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 16: Course Catalog -->
+        <section class="slide" id="slide16">
+            <div class="slide-content">
+                <span class="slide-tag highlight">OUR COURSES</span>
+                <h1>The Complete Course Library</h1>
+                <div class="course-catalog-image">
+                    <img src="course-catalog.jpg" alt="USMLEWise Course Catalog - 9 Premium Masterclasses">
+                </div>
+                <p class="footer-note">All courses included in the 1st Attempt Match System.</p>
+            </div>
+        </section>
+
+        <!-- Slide 17: Comparison -->
+        <section class="slide" id="slide17">
+            <div class="slide-content large-container">
+                <span class="slide-tag">THE DIFFERENCE</span>
+                <h1>How We Compare</h1>
+                <p class="stat-source text-center">USMLEWise vs generic match prep companies and freelancers.</p>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Generic Prep / Freelancers</th>
+                            <th class="usmle-col">USMLEWise 1st Attempt System</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Approach</strong></td>
+                            <td>Fragmented. Different people for CV, PS, interviews. Story gets lost.</td>
+                            <td class="usmle-col">One integrated system. Every piece tells the same coherent story.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Personal Statement</strong></td>
+                            <td>Template-based editing. Generic language. No evaluation frameworks.</td>
+                            <td class="usmle-col">PS3x training built on AAMC EACM, ACGME Gen Competencies & PCM-6 Model.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ERAS CV</strong></td>
+                            <td>Light proofreading. Basic bullet points.</td>
+                            <td class="usmle-col">ERAS CV 3X training. Bullet-to-Story method. Competency mapping.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interviewing</strong></td>
+                            <td>Basic question lists. Strategy-less mock interviews.</td>
+                            <td class="usmle-col">Advanced Interviewing: Inner game, outer game, real mock analysis.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Strategy</strong></td>
+                            <td>"Apply broadly." No data.</td>
+                            <td class="usmle-col">Data-driven program selection, signaling strategy & timeline mapping.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Research</strong></td>
+                            <td>Not included.</td>
+                            <td class="usmle-col">4 specialized courses: case reports, systematic reviews, meta-analysis, etc.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frameworks</strong></td>
+                            <td>None. Gut feeling and templates.</td>
+                            <td class="usmle-col">EACM, ACGME Core Competencies, PCM-6, OCEAN, Straight Line Model.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Community</strong></td>
+                            <td>Email support. Days to respond.</td>
+                            <td class="usmle-col">Private WhatsApp. Ask staff & alumni. Answers within hours.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Slide 18: Advanced Interviewing -->
+        <section class="slide" id="slide18">
+            <div class="slide-content">
+                <span class="slide-tag highlight">WHAT'S INSIDE</span>
+                <div class="course-header">
+                    <h1>Advanced Interviewing</h1>
+                    <div class="course-value-badge">$399 Value</div>
+                </div>
+                
+                <p class="course-subtitle">The most comprehensive residency interview course ever created. 3 modules. 5+ hours.</p>
+
+                <div class="modules-stack">
+                    <div class="module-item">
+                        <h4>Module 1: The Inner Game</h4>
+                        <p>Psychology of connection. PCM communication model, OCEAN personality framework, frame control, calibration, the Straight Line model, contextual authenticity.</p>
+                    </div>
+                    <div class="module-item">
+                        <h4>Module 2: The Outer Game</h4>
+                        <p>Plug-and-play frameworks for every question type. "Tell me about yourself," "Why this specialty," strengths, weaknesses, behavioral, and red flag questions.</p>
+                    </div>
+                    <div class="module-item">
+                        <h4>Module 3: Mock Interview Analysis</h4>
+                        <p>Watch real successful candidates implement every technique.</p>
+                    </div>
+                </div>
+
+                <div class="callout-box success" style="margin-bottom: 15px;">
+                    <strong>97.2%</strong> match success rate across <strong>2,900+</strong> trained candidates.
+                </div>
+
+                <div class="testimonial-box">
+                    <p>"I went from feeling unsure to confident. I matched into a top internal medicine program."</p>
+                    <span class="author">— Dr. Arun, IM Resident</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 19: PS3x -->
+        <section class="slide" id="slide19">
+            <div class="slide-content">
+                <span class="slide-tag highlight">WHAT'S INSIDE</span>
+                <div class="course-header">
+                    <h1>PS3x Personal Statement Training</h1>
+                    <div class="course-value-badge">$249 Value</div>
+                </div>
+                
+                <p class="course-subtitle">81% of PDs consider your personal statement when deciding who to interview.</p>
+                <div class="callout-box warning">One page. One shot. One chance to be unforgettable.</div>
+
+                <div class="framework-list">
+                    <h3>Learn the 3-framework system PDs actually use:</h3>
+                    <ul>
+                        <li><span class="check">→</span> <strong>AAMC's EACM Holistic Review:</strong> Experiences, Attributes, Competencies, Metrics</li>
+                        <li><span class="check">→</span> <strong>ACGME 6 Core Competencies</strong></li>
+                        <li><span class="check">→</span> <strong>PCM-6 Communication Psychology:</strong> logical clarity, emotional truth, personal values, vivid imagination, call-to-action energy, relational likeability</li>
+                    </ul>
+                </div>
+                
+                <p class="footer-note">Learn how to craft a PS that makes a PD think: <strong>"I need to meet this person."</strong></p>
+            </div>
+        </section>
+
+        <!-- Slide 20: ERAS CV 3X -->
+        <section class="slide" id="slide20">
+            <div class="slide-content">
+                <span class="slide-tag highlight">WHAT'S INSIDE</span>
+                <div class="course-header">
+                    <h1>ERAS CV 3X Training</h1>
+                    <div class="course-value-badge">$499 Value</div>
+                </div>
+                
+                <p class="course-subtitle">85% of PDs look at your MSPE and 84% look at your LORs.</p>
+                <div class="callout-box success">Learn the <strong>Bullet-to-Story</strong> method that transforms dead lines into interview-generating statements.</div>
+
+                <div class="framework-list large">
+                    <ul>
+                        <li><span class="check">→</span> Full 3X Model integration (EACM, ACGME, PCM-6)</li>
+                        <li><span class="check">→</span> "Most Meaningfuls" selection guidance</li>
+                        <li><span class="check">→</span> Red flag reframing (gaps, YOG, attempts → growth narratives)</li>
+                        <li><span class="check">→</span> Narrative alignment with your personal statement and LORs</li>
+                        <li><span class="check">→</span> <strong>One coherent story across your entire application</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 21: Application Strategy -->
+        <section class="slide" id="slide21">
+            <div class="slide-content">
+                <span class="slide-tag highlight">WHAT'S INSIDE</span>
+                <div class="course-header">
+                    <h1>Match Application Strategy</h1>
+                    <div class="course-value-badge">$299 Value</div>
+                </div>
+                
+                <p class="course-subtitle" style="font-size: 1.5rem; color: var(--gold);">Stop applying and praying. Start applying with precision.</p>
+
+                <div class="framework-list centralized">
+                    <ul>
+                        <li><span class="check">→</span> Data-driven program selection</li>
+                        <li><span class="check">→</span> Signaling strategy built around your profile</li>
+                        <li><span class="check">→</span> Application timeline and exact milestones</li>
+                        <li><span class="check">→</span> How to make every piece of your application work together</li>
+                        <li><span class="check">→</span> Strategy that works perfectly for IMGs, US IMGs, MDs, and DOs</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-note" style="margin-top:40px;">This is the roadmap between where you are now and <strong>Match Day</strong>.</div>
+            </div>
+        </section>
+
+        <!-- Slide 22: Research & Community -->
+        <section class="slide" id="slide22">
+            <div class="slide-content">
+                <div class="two-column align-top">
+                    <!-- Research Column -->
+                    <div class="column content-box">
+                        <span class="slide-tag highlight">WHAT'S INSIDE</span>
+                        <div class="course-header compact">
+                            <h2>Research Publication Courses</h2>
+                            <div class="course-value-badge small">$596 Value</div>
+                        </div>
+                        <p class="small text-left">42% of PDs consider research involvement. Top programs want scholars.</p>
+                        <ul class="clean-list">
+                            <li><span class="check">→</span> Case Report Writing ($149)</li>
+                            <li><span class="check">→</span> Systematic Reviews ($149)</li>
+                            <li><span class="check">→</span> Meta-Analysis ($149)</li>
+                            <li><span class="check">→</span> Original Research ($149)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Community Column -->
+                    <div class="column content-box gold-border">
+                        <span class="slide-tag highlight">WHAT'S INSIDE</span>
+                        <div class="course-header compact">
+                            <h2>Private WhatsApp Community</h2>
+                            <div class="course-value-badge small green">Included</div>
+                        </div>
+                        <p class="small text-left">You're not doing this alone.</p>
+                        <ul class="clean-list">
+                            <li><span class="check">→</span> Priority access to our staff and matched alumni</li>
+                            <li><span class="check">→</span> Ask questions and get answers within hours</li>
+                            <li><span class="check">→</span> Real guidance from people who've walked this exact path</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="author" style="margin-top: 30px;">This is why we cap enrollment. Only 23 slots remaining. When the quality of support is this high, we refuse to dilute it.</p>
+            </div>
+        </section>
+
+        <!-- Slide 23: Webinar Bonuses -->
+        <section class="slide" id="slide23">
+            <div class="slide-content">
+                <span class="slide-tag highlight">ENROLL NOW BONUSES</span>
+                <h1>Exclusive Bonuses<br><span class="highlight-gold">When You Enroll Today</span></h1>
+
+                <div class="two-column" style="max-width: 900px; margin: 30px auto;">
+                    <!-- Bonus 1 -->
+                    <div class="column content-box" style="border: 1px solid rgba(255, 200, 87, 0.25);">
+                        <div class="course-header compact">
+                            <h2>Match '27 Sample List</h2>
+                            <div class="course-value-badge small">$99 Value</div>
+                        </div>
+                        <p class="small text-left" style="margin-bottom: 15px;">Our complete, updated collection of real samples from candidates who matched:</p>
+                        <ul class="clean-list">
+                            <li><span class="check">→</span> Personal Statement samples (matched candidates)</li>
+                            <li><span class="check">→</span> ERAS CV templates</li>
+                            <li><span class="check">→</span> Letter of Recommendation (LoR) templates</li>
+                            <li><span class="check">→</span> Letter of Interest (LoI) templates</li>
+                            <li><span class="check">→</span> Letter of Intent templates</li>
+                            <li><span class="check">→</span> MSPE / Medical School Transcript templates</li>
+                        </ul>
+                    </div>
+
+                    <!-- Bonus 2 -->
+                    <div class="column content-box" style="border: 1px solid rgba(21, 198, 255, 0.25);">
+                        <div class="course-header compact">
+                            <h2>Conference Database</h2>
+                            <div class="course-value-badge small">$79 Value</div>
+                        </div>
+                        <p class="small text-left" style="margin-bottom: 15px;">A curated database of medical conferences to boost your CV and networking:</p>
+                        <ul class="clean-list">
+                            <li><span class="check">→</span> Research presentation opportunities</li>
+                            <li><span class="check">→</span> Poster & oral abstract deadlines</li>
+                            <li><span class="check">→</span> Networking events with PDs</li>
+                            <li><span class="check">→</span> Specialty-specific conference lists</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="footer-note">Both bonuses included <strong>free</strong> when you enroll in the 1st Attempt Match System today.</p>
+            </div>
+        </section>
+
+        <!-- Slide 24: Total Value Stack -->
+        <section class="slide" id="slide24">
+            <div class="slide-content stack-container">
+                <span class="slide-tag">THE FULL SYSTEM</span>
+                <h1>Here's Everything You're Getting</h1>
+                
+                <div class="value-stack-list">
+                    <div class="stack-item"><span>Advanced Interviewing (full course)</span> <span>$399</span></div>
+                    <div class="stack-item"><span>PS3x Personal Statement Training</span> <span>$249</span></div>
+                    <div class="stack-item"><span>ERAS CV 3X Training</span> <span>$499</span></div>
+                    <div class="stack-item"><span>Match Application Strategy</span> <span>$299</span></div>
+                    <div class="stack-item"><span>Case Report Writing Course</span> <span>$149</span></div>
+                    <div class="stack-item"><span>Systematic Reviews Course</span> <span>$149</span></div>
+                    <div class="stack-item"><span>Meta-Analysis Course</span> <span>$149</span></div>
+                    <div class="stack-item"><span>Original Research Course</span> <span>$149</span></div>
+                    <div class="stack-item"><span>Private WhatsApp Community (staff + alumni)</span> <span class="included-text">Included</span></div>
+                    <div class="stack-item" style="border-left: 3px solid var(--gold);"><span>🎁 Match '27 Sample List (BONUS)</span> <span>$99</span></div>
+                    <div class="stack-item" style="border-left: 3px solid var(--gold);"><span>🎁 Conference Database (BONUS)</span> <span>$79</span></div>
+                </div>
+
+                <div class="total-value-row">
+                    <span>Total Value:</span>
+                    <span class="huge-value">$2,220</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 25: Price Drop 1 ($2220) -->
+        <section class="slide" id="slide25">
+            <div class="slide-content">
+                <span class="slide-tag">THE INVESTMENT</span>
+                <h1>Here's What It Costs</h1>
+                <div class="single-price-display">
+                    <div class="price-card original scale-up">
+                        <span class="price-amount">$2,220</span>
+                        <span class="price-label">Real World Value</span>
+                    </div>
+                </div>
+                <p class="price-context">If you bought these courses individually or hired specialized generic consultants.</p>
+            </div>
+        </section>
+
+        <!-- Slide 26: Price Drop 2 ($999) -->
+        <section class="slide" id="slide26">
+            <div class="slide-content">
+                <span class="slide-tag">BUT WAIT...</span>
+                <h1>We Re-Engineered Access</h1>
+                <div class="single-price-display">
+                    <div class="price-card reduced scale-up">
+                        <span class="price-was">Was $2,220</span>
+                        <span class="price-amount">$999</span>
+                        <span class="price-label">Standard Retail</span>
+                    </div>
+                </div>
+                <p class="price-context">By bundling everything into a cohesive, self-paced integrated system.</p>
+            </div>
+        </section>
+
+        <!-- Slide 27: Price Drop 3 ($699) -->
+        <section class="slide" id="slide27">
+            <div class="slide-content">
+                <span class="slide-tag">AND WE PUSHED FURTHER...</span>
+                <h1>Making it Accessible</h1>
+                <div class="single-price-display">
+                    <div class="price-card reduced-more scale-up">
+                        <span class="price-was">Was $999</span>
+                        <span class="price-amount">$699</span>
+                        <span class="price-label">Regular Cohort Pricing</span>
+                    </div>
+                </div>
+                <p class="price-context">Because no IMG shouldn't match simply because of a paywall.</p>
+            </div>
+        </section>
+
+        <!-- Slide 28: Final Price ($299) -->
+        <section class="slide" id="slide28">
+            <div class="slide-content">
+                <span class="slide-tag special">🔥 EARLY BIRD PRICING</span>
+                <h1>Only 23 Spots Remaining</h1>
+                <div class="single-price-display">
+                    <div class="price-card final massive scale-up">
+                        <span class="price-was">Was $699</span>
+                        <span class="price-amount highlight">$299</span>
+                        <span class="price-label">Full Lifetime Access</span>
+                    </div>
+                </div>
+                <div class="convinced-box green-tint">
+                    <p>Start immediately. Prepare on your schedule.<br>For IMGs, US IMGs, MDs, and DOs.</p>
+                </div>
+                <div class="callout-box" style="margin-top: 15px;">
+                    <p>💡 <strong>100% creditable</strong> — Your $299 is fully applied toward any USMLEWise match package if you choose to work with us.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 29: Webinar Credit Applied -->
+        <section class="slide" id="slide29">
+            <div class="slide-content">
+                <span class="slide-tag special">💰 YOUR WEBINAR CREDIT</span>
+                <h1>You Already Paid $29 Today</h1>
+
+                <div class="credit-math">
+                    <div class="credit-row">
+                        <span class="credit-label">Early Bird Price</span>
+                        <span class="credit-value">$299</span>
+                    </div>
+                    <div class="credit-row subtract">
+                        <span class="credit-label">Your Webinar Credit</span>
+                        <span class="credit-value">− $29</span>
+                    </div>
+                    <div class="credit-row final">
+                        <span class="credit-label">You Pay Today</span>
+                        <span class="credit-value big">$270</span>
+                    </div>
+                </div>
+
+                <div class="convinced-box green-tint" style="margin-top: 30px;">
+                    <p><strong>Full Lifetime Access.</strong> Start immediately.<br>Your $29 webinar fee is fully credited — you only pay the difference.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 30: The Numbers Behind the System -->
+        <section class="slide" id="slide30">
+            <div class="slide-content">
+                <span class="slide-tag">THE PROOF</span>
+                <h1 class="small-margin">The Numbers Behind the System</h1>
+
+                <div class="stats-grid">
+                    <div class="stat-row top-tier">
+                        <span class="percentage">100%</span>
+                        <span class="stat-desc">USMLEWise US MDs, DOs, and US IMGs</span>
+                    </div>
+                    <div class="stat-row high-tier">
+                        <span class="percentage">100%</span>
+                        <span class="stat-desc">USMLEWise Non-US IMGs (without red flags)</span>
+                    </div>
+                    <div class="stat-row mid-tier">
+                        <span class="percentage">88%</span>
+                        <span class="stat-desc">USMLEWise Non-US IMGs (all data, including red flags)</span>
+                    </div>
+                    
+                    <div class="vs-divider-small">V S &nbsp; N A T I O N A L &nbsp; A V E R A G E S</div>
+
+                    <div class="stat-row low-tier">
+                        <span class="percentage">53.4%</span>
+                        <span class="stat-desc">Corrected national rate for US IMGs (NRMP 2026)</span>
+                    </div>
+                    <div class="stat-row low-tier">
+                        <span class="percentage">46.0%</span>
+                        <span class="stat-desc">Corrected national rate for non-US IMGs (NRMP 2026)</span>
+                    </div>
+                </div>
+
+                <div class="callout-box success large" style="margin-top: 30px;">
+                    <p>The corrected national non-US IMG rate is 46%. Ours is 100%.</p>
+                    <strong>"That's not luck. That's a system."</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 31: Final CTA -->
+        <section class="slide" id="slide31">
+            <div class="slide-content cta-slide">
+                <h1 style="font-size: 3rem;">Enroll in the 1st Attempt System</h1>
+                
+                <div class="single-price-display" style="margin: 20px 0;">
+                    <div class="price-amount highlight" style="font-size: 6rem;">$270</div>
+                </div>
+
+                <div class="cta-button-container" style="margin: 20px 0;">
+                    <a href="#" class="cta-button pulse massive">
+                        <span class="cta-text">ENROLL NOW - SECURE YOUR SPOT</span>
+                        <span class="cta-arrow">→</span>
+                    </a>
+                </div>
+                
+                <div class="reminder-list">
+                    <div class="reminder-item">
+                        <span class="check">✓</span>
+                        <p>5 Premium Courses + 2 Bonuses ($2,220 Value)</p>
+                    </div>
+                    <div class="reminder-item">
+                        <span class="check">✓</span>
+                        <p>Private WhatsApp Community included (Staff + Alumni)</p>
+                    </div>
+                    <div class="reminder-item">
+                        <span class="check">✓</span>
+                        <p>Self-paced. Lifetime access. Start immediately.</p>
+                    </div>
+                    <div class="reminder-item">
+                        <span class="check">✓</span>
+                        <p>100% creditable toward any USMLEWise match package.</p>
+                    </div>
+                </div>
+                
+                <div class="final-urgency">
+                    <p>🔥 <strong>ONLY 23 SPOTS REMAINING.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="slide-nav">
+            <button class="nav-btn prev" id="prevBtn">←</button>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">31</span>
+            </div>
+            <button class="nav-btn next" id="nextBtn">→</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
